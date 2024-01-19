@@ -1,0 +1,20 @@
+@use '/src/styles/_variables.scss' as v;
+
+
+html , body , #root{
+    margin: 0;
+    font-family: 'andikaregular' , sans-serif;
+    background-color: v.$secondaryColor;
+    scroll-behavior: smooth;
+    color: v.$primaryColor;
+    font-size: 16px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);  
+}
+p{
+    line-height: 1.4rem;
+    
+}

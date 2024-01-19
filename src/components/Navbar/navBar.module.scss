@@ -1,0 +1,187 @@
+
+
+@use '/src/styles/_variables.scss' as v;
+
+nav{
+    height: 80px;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    background-color: v.$secondaryColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.logoBar {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    margin-inline: 60px;
+}
+.logoBar > img{
+    height: 50%;
+}
+
+
+
+
+
+
+
+.navigationBar {
+    flex: 1;
+    color: #1E1C1C;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navigationBar > a {
+    height: 100%;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: v.$primaryColor;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+    position: relative;
+}
+.navigationBar > a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: v.$primaryColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.25s ease-in-out;
+}
+.navigationBar > a:hover::before{
+    width: 100%;
+}
+.navigationBar > a:first-child{
+    margin-left: 0;
+}
+.navigationBar > a:last-child{
+    margin-right: 0;
+}
+
+
+.orderBtn {
+    background-color: v.$primaryColor;
+    color: v.$white !important;
+    height: auto !important;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 999px;
+    margin-left: auto !important;
+    margin-right: 60px !important;
+    border: 2px solid v.$primaryColor;
+
+}
+.orderBtn::before{
+    content: none !important;
+}
+.orderBtn:hover{
+    background-color: v.$secondaryColor;
+    color: v.$primaryColor !important;
+}
+
+
+
+
+
+
+
+.menuBtn {
+    height: 75%;
+    aspect-ratio: 1;
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    z-index: 999;
+}
+.menuBtn > div {
+    width: 100%;
+    height: 2px;
+    background-color: v.$white;
+    border-radius: 999px;
+}
+.menuBtn > div.active {
+    background-color: v.$black;
+}
+
+@media only screen and (min-width: 0px) and (max-width:640px) {
+
+    nav > .logoBar > img {
+       height: 40%;
+    }
+    
+    .logoBar {
+        width: auto;
+        padding-left: 25px;
+        margin: 0;
+    }
+    .navigationBar {
+        padding-left: 0;
+        padding-right: 25px;
+    }
+    .navigationBar > a {
+        display: none;
+    }
+ 
+    
+}
+@media only screen and (min-width: 640px) and (max-width:992px) {
+
+   
+    nav > .logoBar > img {
+        height: 50%;
+    }
+    nav > .logoBar::before{
+        border-bottom: 5rem solid v.$secondaryColor;
+    }
+    .logoBar {
+        width: 40%;
+        padding-right: 25px;
+    }
+    .navigationBar {
+        padding-left: calc(40% + 25px);
+        padding-right: 25px;
+
+    }
+    .navigationBar > a {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+
+    nav > .logoBar > img {
+        height: 50%;
+    }
+    nav > .logoBar::before{
+        border-bottom: 5rem solid v.$secondaryColor;
+    }
+
+
+}
+

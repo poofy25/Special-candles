@@ -1,0 +1,64 @@
+@use '/src/styles/_variables.scss' as v;
+
+
+.section {
+    width: 100%;
+    padding-inline: 7.5vw;
+    padding-block: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.section > h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+.contentWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial{
+    width: 30%;
+    aspect-ratio: 10/8;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testimonial > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    z-index: -1;
+}
+.testimonial > span {
+  width: 100%;
+  display: flex;
+  align-items: start;
+}
+.testimonial > span > img {
+    width: 1.5rem;
+}
+.testimonial > span:last-child{
+    justify-content: end;
+}
+.testimonial > p {
+    font-size: 1.1rem;
+}
