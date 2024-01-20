@@ -1,6 +1,6 @@
 import styles from './navBar.module.scss'
 
-import logo from '/src/assets/Images/logo_cropped_trans.png'
+import logo from '/src/assets/images/logo_cropped_trans.png'
 import NavBarMenu from './NavBarMenu'
 
 import { useState } from 'react'
