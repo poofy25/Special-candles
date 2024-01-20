@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    min-height: 100vh;
 }
 .section > h2 {
     width: 100%;
@@ -21,60 +22,71 @@
 .contentWrapper{
     width: 100%;
     display: flex;
+    flex: 1;
     justify-content: space-between;
+    align-items: center;
+}
+.contentWrapper > article {
+    width: 50%;
 }
 
-.testimonial{
-    width: 30%;
-    aspect-ratio: 10/8;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    padding: 2rem;
-    box-sizing: border-box;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+.info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
 }
-.testimonial > img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    opacity: 0.1;
-    z-index: -1;
-}
-.testimonial > span {
-  width: 100%;
-  display: flex;
-  align-items: start;
-}
-.testimonial > span > img {
-    width: 1.5rem;
-    filter: invert(18%) sepia(4%) saturate(932%) hue-rotate(11deg) brightness(95%) contrast(87%);
-}
-.testimonial > span:last-child{
-    justify-content: end;
-}
-.testimonial > p {
+.info > a {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color:v.$textColor;
+    transition: 0.25s ease-in-out;
+}
+.info > a > img {
+    width: 3rem;
+    margin-right: 1rem;
+    filter: invert(18%) sepia(4%) saturate(932%) hue-rotate(11deg) brightness(95%) contrast(87%);
+    transition: 0.25s ease-in-out;
+
+}
+
+.info > a:hover{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+
+}
+
+
+
+.map > iframe{
+    width: 100%;
+    aspect-ratio: 10/8;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.25);
 }
 
 
 @media only screen and (min-width: 0px) and (max-width:640px) {
     .contentWrapper{
-        width: 100%;
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 3rem;
     }
-    .testimonial{
+    .contentWrapper > article {
         width: 100%;
+    }
+    .info > a {
+        white-space: wrap;
+        
+        width: 100%;
+    }
+    .map > iframe{
+        aspect-ratio: 10/16;
+        margin-top: 3rem;
     }
 
 }

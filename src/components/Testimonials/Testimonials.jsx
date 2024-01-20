@@ -9,7 +9,7 @@ import closeQuote from '/src/assets/svgs/close-quotation.svg'
 function TestimonialsSection() {
     return ( 
 
-        <section className={styles.section}>
+        <section className={styles.section} id="recenzii">
 
         <h2>Ce Spun Clienții Noștrii</h2>
 

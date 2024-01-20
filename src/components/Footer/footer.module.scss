@@ -1,0 +1,97 @@
+@use '/src/styles/_variables.scss' as v;
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: v.$primaryColor;
+    color: v.$secondaryColor;
+
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-inline: 10%;
+    padding-block: 2rem;
+    box-sizing: border-box;
+}
+.content > article {
+    display: flex;
+    flex-direction: column;
+}
+.content > article > h3 {
+    color: v.$secondaryColor;
+
+}
+.content > article > a {
+    margin: 0;
+    line-height: 18px;
+    margin-bottom: 1rem; 
+    text-decoration: none;
+    color: v.$secondaryColor;
+    opacity:0.85 ;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+.content > article > a:hover {
+  text-decoration: underline;
+  opacity:1 ;
+
+}
+.content > article > span > a > img{
+    width: 3rem;
+    margin-right: 1rem;
+    filter: invert(99%) sepia(50%) saturate(88%) hue-rotate(7deg) brightness(99%) contrast(90%);
+}
+
+.bottom{
+    width: 100%;
+    padding-inline: 7.5vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:v.$secondaryColor;
+    background-color: v.$primaryColor;
+}
+.bottom > a {
+    font-size: 1rem;
+    opacity:0.8 ;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width:640px) {
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .content > article {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .bottom{
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .bottom > a {
+        font-size: 1rem;
+        opacity:0.8 ;
+    }
+
+}
+ @media only screen and (min-width: 640px) and (max-width:992px){
+}
+    
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+    
+}
+@media only screen and (min-width: 1200px) {
+    
+}
